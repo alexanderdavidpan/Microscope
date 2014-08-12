@@ -5,7 +5,13 @@ Router.configure({
 });
 
 Router.map(function() { 
-    this.route('postsList', {path: '/'});
+    this.route('postsList', {
+        path: '/'
+    });
+
+    this.route('postPage', { 
+        path: '/posts/:_id'
+    });
 });
 
 Router.onBeforeAction('loading');
