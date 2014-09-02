@@ -26,9 +26,12 @@ Router.map(function() {
     });
 
     this.route('postsList', {
-        path: '/:postsLimit?'
+        path: '/:postsLimit?',
+        waitOn: function() {
+            var postsLimit = parseInt(this.params.postsLimit) || 5;
+            return Meteor.subscribe('posts', {sort: {submitted: -1}, limit: postsLimit });
+        }
     });
-    
 });
 
 var requireLogin = function(pause) { 
