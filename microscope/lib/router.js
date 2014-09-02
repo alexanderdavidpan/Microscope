@@ -7,9 +7,6 @@ Router.configure({
 });
 
 Router.map(function() { 
-    this.route('postsList', {
-        path: '/'
-    });
 
     this.route('postPage', { 
         path: '/posts/:_id',
@@ -27,6 +24,11 @@ Router.map(function() {
     this.route('postSubmit', {
         path: '/submit'
     });
+
+    this.route('postsList', {
+        path: '/:postsLimit?'
+    });
+    
 });
 
 var requireLogin = function(pause) { 
