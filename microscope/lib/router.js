@@ -7,7 +7,8 @@ Router.configure({
 });
 
 PostsListController = RouteController.extend({
-    template: 'postsList'
+    template: 'postsList',
+    increment: 5
 });
 
 Router.map(function() {
