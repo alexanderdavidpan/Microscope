@@ -14,6 +14,9 @@ PostsListController = RouteController.extend({
     },
     findOptions: function() {
         return {sort: {submitted: -1}, limit: this.limit()};
+    },
+    waitOn: function() {
+        return Meteor.subscribe('posts', this.findOptions()); 
     }
 });
 
