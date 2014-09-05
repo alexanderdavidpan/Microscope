@@ -11,6 +11,9 @@ PostsListController = RouteController.extend({
     increment: 5,
     limit: function() {
         return parseInt(this.params.postsLimit) || this.increment; 
+    },
+    findOptions: function() {
+        return {sort: {submitted: -1}, limit: this.limit()};
     }
 });
 
