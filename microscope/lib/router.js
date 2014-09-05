@@ -6,6 +6,10 @@ Router.configure({
   }
 });
 
+PostsListController = RouteController.extend({
+
+});
+
 Router.map(function() {
   this.route('postPage', {
     path: '/posts/:_id',
