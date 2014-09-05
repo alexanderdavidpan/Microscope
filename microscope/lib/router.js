@@ -17,6 +17,9 @@ PostsListController = RouteController.extend({
     },
     waitOn: function() {
         return Meteor.subscribe('posts', this.findOptions()); 
+    },
+    data: function() {
+        return {posts: Posts.find({}, this.findOptions())};
     }
 });
 
