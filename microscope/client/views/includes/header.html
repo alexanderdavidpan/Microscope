@@ -12,11 +12,11 @@
           <li class="{{activeRouteClass 'home' 'newPosts'}}">
             <a href="{{pathFor 'newPosts'}}">New</a>
           </li>
-          <li class="{{activeRouteClass 'home' 'newPosts'}}">
+          <li class="{{activeRouteClass  'bestPosts'}}">
             <a href="{{pathFor 'bestPosts'}}">Best</a>
           </li>
           {{#if currentUser}}
-            <li class="{{activeRouteClass 'home' 'newPosts'}}">
+            <li class="{{activeRouteClass 'postSubmit'}}">
               <a href="{{pathFor 'postSubmit'}}">Submit Post</a>
             </li>
             <li class="dropdown">
